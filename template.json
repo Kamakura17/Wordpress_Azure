@@ -105,7 +105,8 @@
                         "[concat('Microsoft.Web/sites/', parameters('name'))]"
                     ],
                     "properties": {
-                        "linuxFxVersion": "[parameters('linuxFxVersion')]"
+                        "linuxFxVersion": "[parameters('linuxFxVersion')]",
+                        "phpVersion": "8.0"
                     }
                 }
             ]
