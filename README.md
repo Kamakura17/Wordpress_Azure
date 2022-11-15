@@ -1,4 +1,4 @@
-# Wordpress for Azure App Services (Windows)
+# Wordpress for Azure App Services (Linux)
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKamakura17%2FWordpress_Azure%2Fmaster%2Ftemplate.json)
 
