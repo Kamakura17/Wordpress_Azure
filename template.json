@@ -11,9 +11,6 @@
         "hostingPlanName": {
             "type": "string"
         },
-        "serverFarmResourceGroup": {
-            "type": "string"
-        },
         "alwaysOn": {
             "type": "bool"
         },
@@ -76,7 +73,7 @@
                     "minTlsVersion": "1.2",
                     "alwaysOn": "[parameters('alwaysOn')]"
                 },
-                "serverFarmId": "[concat('/resourcegroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
+                "serverFarmId": "[parameters('hostingPlanName')]",
                 "clientAffinityEnabled": false,
                 "virtualNetworkSubnetId": null,
                 "httpsOnly": true
