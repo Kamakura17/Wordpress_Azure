@@ -35,9 +35,6 @@
         "numberOfWorkers": {
             "type": "string"
         },
-        "linuxFxVersion": {
-            "type": "string"
-        },
         "repoUrl": {
             "type": "string",
             "defaultValue": "https://github.com/Kamakura17/Wordpress_Azure",
