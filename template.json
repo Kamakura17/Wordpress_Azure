@@ -87,20 +87,6 @@
             }
         },
         {
-            "condition": "[contains(parameters('repoUrl'), 'http')]",
-            "type": "Microsoft.Web/sites/sourcecontrols",
-            "apiVersion": "2021-02-01",
-            "name": "[format('{0}/{1}', parameters('name'), 'web')]",
-            "properties": {
-                "repoUrl": "[parameters('repoUrl')]",
-                "branch": "master",
-                "isManualIntegration": true
-            },
-            "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('name'))]"
-            ]
-        },
-        {
             "apiVersion": "2018-11-01",
             "name": "[parameters('hostingPlanName')]",
             "type": "Microsoft.Web/serverfarms",
