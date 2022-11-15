@@ -40,9 +40,18 @@
         },
         "linuxFxVersion": {
             "type": "string"
+        },
+        "repoUrl": {
+            "type": "string",
+            "defaultValue": "https://github.com/Kamakura17/Wordpress_Azure",
+            "metadata": {
+                "description": "Optional Git Repo URL"
+            }
         }
     },
-    "variables": {},
+    "variables": {
+        "appServicePlanPortalName": "[format('AppServicePlan-{0}', parameters('name'))]"
+    },
     "resources": [
         {
             "apiVersion": "2018-11-01",
@@ -76,6 +85,20 @@
                 "virtualNetworkSubnetId": null,
                 "httpsOnly": true
             }
+        },
+        {
+            "condition": "[contains(parameters('repoUrl'), 'http')]",
+            "type": "Microsoft.Web/sites/sourcecontrols",
+            "apiVersion": "2021-02-01",
+            "name": "[format('{0}/{1}', parameters('name'), 'web')]",
+            "properties": {
+                "repoUrl": "[parameters('repoUrl')]",
+                "branch": "master",
+                "isManualIntegration": true
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('name'))]"
+            ]
         },
         {
             "apiVersion": "2018-11-01",
