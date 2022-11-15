@@ -59,7 +59,13 @@
             "properties": {
                 "name": "[parameters('name')]",
                 "siteConfig": {
-                    "appSettings": [],
+                    "localMySqlEnabled": true,
+                    "appSettings": [
+                        { "name": "WEBSITE_MYSQL_ENABLED", "value": "1" },
+                        { "name": "WEBSITE_MYSQL_GENERAL_LOG", "value": "0" },
+                        { "name": "WEBSITE_MYSQL_SLOW_QUERY_LOG", "value": "0" },
+                        { "name": "WEBSITE_MYSQL_ARGUMENTS", "value": "--max_allowed_packet=16M" }
+                    ],
                     "linuxFxVersion": "[parameters('linuxFxVersion')]",
                     "alwaysOn": "[parameters('alwaysOn')]",
                     "ftpsState": "[parameters('ftpsState')]"
