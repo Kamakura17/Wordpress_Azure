@@ -1,6 +1,6 @@
 # Wordpress for Azure App Services (Windows)
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fazureappserviceoss%2Fwordpress-azure%2Fmaster%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKamakura17%2FWordpress_Azure%2Fmaster%2Ftemplate.json)
 
 - This branch will be cloned when you create using WordPress (App Service) from the Azure Marketplace.
 - Current WordPress version: 5.8.1 [(official zip)](https://wordpress.org/wordpress-5.8.1.zip)
