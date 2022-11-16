@@ -21,10 +21,18 @@
             "type": "bool"
         },
         "sku": {
-            "type": "string"
+            "type": "string",
+            "allowedValues": [
+                "Free",
+                "Standard"
+            ]
         },
         "skuCode": {
-            "type": "string"
+            "type": "string",
+            "allowedValues": [
+                "F1",
+                "B1"
+            ]
         },
         "workerSize": {
             "type": "string"
@@ -36,7 +44,11 @@
             "type": "string"
         },
         "linuxFxVersion": {
-            "type": "string"
+            "type": "string",
+            "allowedValues": [
+                "PHP|8.0",
+                "PHP|7.4"
+            ]
         },
         "repoUrl": {
             "type": "string",
