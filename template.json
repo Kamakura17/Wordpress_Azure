@@ -97,8 +97,8 @@
             "resources": [
                 {
                     "apiVersion": "2020-06-01",
-                    "name": "[format('{0}/{1}', parameters('name'), 'web')]",
-                    "type": "microsoft.web/sites/sourcecontrols",
+                    "name": "web",
+                    "type": "sourcecontrols",
                     "dependsOn": [
                         "[resourceId('Microsoft.Web/Sites', parameters('name'))]"
                     ],
