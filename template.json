@@ -94,33 +94,33 @@
                 "virtualNetworkSubnetId": null,
                 "httpsOnly": true
             },
-            "resources": [
-                {
-                    "apiVersion": "2020-06-01",
-                    "name": "web",
-                    "type": "sourcecontrols",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', parameters('name'))]"
-                    ],
-                    "properties":{
-                        "RepoUrl": "[parameters('repoUrl')]",
-                        "branch": "[parameters('branch')]",
-                        "IsManualIntegration": true
+                "resources": [
+                    {
+                        "apiVersion": "2020-06-01",
+                        "name": "web",
+                        "type": "sourcecontrols",
+                        "dependsOn": [
+                            "[resourceId('Microsoft.Web/Sites', parameters('name'))]"
+                        ],
+                        "properties":{
+                            "RepoUrl": "[parameters('repoUrl')]",
+                            "branch": "[parameters('branch')]",
+                            "IsManualIntegration": true
+                        }
+                    },
+                    {
+                        "apiVersion": "2020-06-01",
+                        "name": "web",
+                        "type": "config",
+                        "dependsOn": [
+                            "[concat('Microsoft.Web/sites/', parameters('name'))]"
+                        ],
+                        "properties": {
+                            "linuxFxVersion": "[parameters('linuxFxVersion')]"
+                        }
                     }
-                },
-                {
-                    "apiVersion": "2020-06-01",
-                    "name": "web",
-                    "type": "config",
-                    "dependsOn": [
-                        "[concat('Microsoft.Web/sites/', parameters('name'))]"
-                    ],
-                    "properties": {
-                        "linuxFxVersion": "[parameters('linuxFxVersion')]"
-                    }
-                }
-            ]
-        },
+                ]
+            },
         {
             "apiVersion": "2018-11-01",
             "name": "[parameters('hostingPlanName')]",
