@@ -79,7 +79,7 @@
             "properties": {
                 "name": "[parameters('name')]",
                 "siteConfig": {
-                    //"localMySqlEnabled": true,
+                    "localMySqlEnabled": true,
                     "appSettings": [
                         { "name": "WEBSITE_MYSQL_ENABLED", "value": "1" },
                         { "name": "WEBSITE_MYSQL_GENERAL_LOG", "value": "0" },
