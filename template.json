@@ -62,8 +62,7 @@
             "defaultValue": "master"
         }
     },
-    "variables": {
-    },
+    "variables": {},
     "resources": [
         {
             "apiVersion": "2018-11-01",
